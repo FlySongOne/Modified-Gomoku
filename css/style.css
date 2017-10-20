@@ -1,0 +1,214 @@
+body {
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  color: black;
+  text-align: center;
+  background-repeat: no-repeat;
+}
+
+.row {
+  width: 570px;
+  height: 70px;
+  margin: 0 auto;
+  clear:both;
+  display:flex;
+  border:1px solid #000000;
+}
+
+.cell {
+  width: 70px;
+  height: 70px;
+  border-radius: 0;
+  background: #F9BE04;
+  border: 1px solid #000000;
+  float:left;
+  text-align: center;
+  line-height: 70px;
+  font-size: 60px;
+  color:black;
+
+}
+
+.cell:hover {
+  border: 3px solid #d9dbd0;
+}
+
+p{
+   font-size:30px;
+   color:blue;
+   margin:30px;
+   border:3px;
+}
+
+.stone{
+   padding:5px;
+   width:55px;
+   height:55px;
+   border-radius:50%;
+}
+
+form{
+   text-align: center;
+}
+
+#left{
+  display:inline-block;
+  width:25%;
+}
+
+button{
+   width:100%;
+   height:10%;
+   background-color: white;
+   font-size: 40px;
+   color: white;
+   border-radius: 20%;
+   border:1px none white;
+}
+
+.reset{
+
+   margin-top:50%;
+   margin-left:10%;
+}
+#screen{
+   width:100%;
+   height:20%;
+   background-color: white;
+   margin:10%;
+   font-size:30px;
+   border-radius: 20%;
+   padding-top:20px;
+   border:2px solid black;
+}
+
+#board{
+   width:52.5%;
+   height:100%;
+   background-color: #CC9900;
+   margin: 0 auto;
+   padding:0;
+   border:2px solid black;
+
+}
+
+#container{
+   width:100%;
+   background-color: #FFFFFF;
+   display:flex;
+   justify-content: space-around;
+
+}
+
+#center{
+
+   background-image: url('http://4.bp.blogspot.com/-dqY8ZOvZX8s/U_0Y15kPYpI/AAAAAAAAPTU/jmKlZdD5J2A/s1600/JPN_studyrm-1.jpg');
+   background-repeat: no-repeat;
+   background-size: 100%;
+   width:80%;
+   height: 80%;
+   margin: 0 auto;
+   border:1px solid black;
+}
+
+#top{
+   margin:0 auto;
+   width: 80%;
+   height:20%;
+   border:1px solid black;
+   font-size: 35px;
+   background-color: black;
+   color:white;
+}
+
+form{
+   border:1px solid black;
+   width:50%;
+   margin: 0 auto;
+
+}
+
+input[type=text] {
+  border: 1px solid #999;
+  border-radius: 0;
+  width:50%;
+  height: 5%;
+  font-size: 100%;
+}
+
+input[type=submit] {
+  width:50%;
+  font-size:100%;
+  background-color: black;
+  color:white;
+  border-radius: 20%;
+}
+
+#page1{
+
+  font-size: 24px;
+  text-align: center;
+
+}
+
+#page2{
+
+  display:none;
+}
+
+
+@media only screen and (max-width: 500px) {
+    #container{
+       display:block;
+       height:100%;
+    }
+    #left{
+      display:block;
+      width:100%;
+
+    }
+    .reset{
+      padding:0;
+      margin:0;
+    }
+    #screen{
+      height:20%;
+      margin:2% 0 2% 0;
+      font-size:20px;
+      border:2px solid black;
+    }
+    #board{
+      width:100%;
+      height:65%;
+    }
+    .row {
+      width: 100%;
+      height: 40px;
+    }
+    .cell {
+      width: 12%;
+      height: 40px;
+      font-size: 40px;
+    }
+    .stone{
+      padding:4px;
+      width: 33px;
+      height:33px;
+      border-radius:50%;
+    }
+
+    #center{
+      width: 100%;
+      height: 80%;
+      background-color: black;
+
+    }
+
+    #top{
+      width:100%;
+    }
+
+    form{
+      width:100%;
+      border:none;
+    }
+}
