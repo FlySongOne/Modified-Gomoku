@@ -8,7 +8,7 @@
   Go pieces(black and white stones) on a go board with 8 X 8 grid. 
   Two players play stones to make a horizontal, vertical or diagonal row of four stones to win the game.  
 
-## Wireframe
+## Wireframes
 ![wireframes2](./images/landing-wireFrame.png)
 ![wireframes4](./images/landing-media.png)
 ![wireframes](./images/wireFrame.png)
@@ -22,7 +22,7 @@ another player can not place a stone in that space. If a player places four ston
 
 The challenges I encountered:
 - placing black and white stone images on a board
-- checking winning condition on a board. There are 64 cells, so there can be 
+- checking winning conditions on a board. There are 64 cells, so there can be 
   130 winning conditions horizontally, vertically and diagonally on a board 
   and on a 2-dimensional array that holds user's input values from clicks. 
   
@@ -34,6 +34,7 @@ The challenges I encountered:
 - Go style white and black stones and a board 
 - Winner's name announcement
 
+
 ** future expansion: 
 - computer AI plays against a user. 
 - start and reset button
@@ -43,9 +44,8 @@ The challenges I encountered:
 #Technologies 
 JavaScript, jQuery, HTML, CSS, Document Object Model
 
-# bitballon 
+# bitballon - You can play the game by clicking the link below. 
 http://modified-gomoku.bitballoon.com/
 
-#Unsolved problems
-- Because of limited time, I was not able to include more features that I have planned.
+
  
