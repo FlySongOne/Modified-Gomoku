@@ -239,47 +239,6 @@ function checkForWin(str){
        }
 
 }
-// reset function reset boardArr, horizontalRows,verticalRows, diagonalRows,
-// turn to 1, keepPlaying as true, and remove stone image elements from each
-// cell. this function is called when re-start button is clicked.
-/*
-function reset(){
-    boardArr = [ ['-','-','-','-','-','-','-','-'],
-                 ['-','-','-','-','-','-','-','-'],
-                 ['-','-','-','-','-','-','-','-'],
-                 ['-','-','-','-','-','-','-','-'],
-                 ['-','-','-','-','-','-','-','-'],
-                 ['-','-','-','-','-','-','-','-'],
-                 ['-','-','-','-','-','-','-','-'],
-                 ['-','-','-','-','-','-','-','-']];
-    horizonRows = ["","","","","","","",""];
-    verticalRows = ["","","","","","","",""];
-    diagonalRows = ["","","","","","","","",""];
-    diagonalRows2 = ["","","","","","","","",""];
-    turn = 1;             // set turn to 1, so black stone can play first again.
-    keepPlaying = true;   // making game playable again by setting it to true.
-    // get rid of all stone image elements from cells.
-    for(let z =0; z < cell.length;z++)
-    {
- //      if(cell[z].firstElementChild)
-       if($(cell[z]))
-       {
-             let stone = $(cell[z]).first();
-             console.log(stone);
- //          cell[z].removeChild(document.querySelector('.stone'));
- //          stone.remove();
-
- //          $(cell[z]).on('click',play);
-       }
-    }
-}
-*/
-// when reset button is clicked, it calls reset function.
-//$( ".reset" ).click(function() {
-//  alert( ".click() called." );
-//  reset();
-
-//});
 
 
 function game(){
