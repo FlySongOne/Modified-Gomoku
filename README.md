@@ -41,7 +41,7 @@ The challenges I encountered:
 - score board
 
 
-#Technologies 
+# Technologies 
 JavaScript, jQuery, HTML, CSS, Document Object Model
 
 # bitballon - You can play the game by clicking the link below. 
