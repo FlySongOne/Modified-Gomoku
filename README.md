@@ -33,11 +33,11 @@ The challenges I encountered:
 - A short instruction 
 - Go style white and black stones and a board 
 - Winner's name announcement
+- Reset button
 
 
 ** future expansion: 
 - computer AI plays against a user. 
-- start and reset button
 - score board
 
 
