@@ -239,7 +239,48 @@ function checkForWin(str){
        }
 
 }
+// reset function reset boardArr, horizontalRows,verticalRows, diagonalRows,
+// turn to 1, keepPlaying as true, and remove stone image elements from each
+// cell. this function is called when re-start button is clicked.
+function reset(){
+    // reset the board
+    for(let a =0;a < 8; a++){
+       for(let b=0; b < 8; b++){
+          boardArr[a][b] = '-';
+       }
+       horizonRows[a] = "";
+       verticalRows[a] = "";
+    }
 
+    diagonalRows = ["","","","","","","","",""];
+    diagonalRows2 = ["","","","","","","","",""];
+    turn = 1;             // set turn to 1, so black stone can play first again.
+    keepPlaying = true;   // making game playable again by setting it to true.
+
+    // get rid of all stone image elements from cells.
+    let cellEle;
+    for(let z =0; z < cell.length;z++)
+    {
+       if(cell[z].firstElementChild) // if cell has child element, which is an image
+       {
+          cellEle = $(cell[z]).first();
+     //   console.log('stone to be removed  ',cellEle);
+          cellEle.empty();   // empty the stone image from each cell
+
+       }
+
+    }
+    game();
+
+}
+
+// when reset button is clicked, it calls reset function.
+$( ".reset" ).click(function() {
+  alert( "Reset button clicked" );
+  reset();
+  $('#screen').html("Connect 4 stones!");
+
+});
 
 function game(){
 // starting of main codes
@@ -252,7 +293,7 @@ function game(){
       if(keepPlaying === true)
       {
       //when cell is clicked, create an img element with a class 'stone'
-
+      if(!$(cell[i]).children().length){
         let stoneEle = $('<img>').attr('class','stone');
         if(turn % 2 === 0)
         {
@@ -261,18 +302,20 @@ function game(){
           stoneEle.attr('src',white.image);
          // cell's index number, white stone player's value to inputVal function
           inputValue(i,white.value);
+          turn++;    // turn increments
         }else{
          // if turn is odd, it is black stone's turn, it adds black stone image
          // to the img element.
           stoneEle.attr('src',black.image);
          // cell's index number, black stone player's value to inputVal function
           inputValue(i,black.value);
+          turn++;    // turn increments
         }
         // stoneElement is appended to each cell element.
         stoneEle.appendTo(cell[i]);
+      }
         // once the cell is clicked, remove eventListener in that cell.
         $(cell[i]).off('click',play);
-        turn++;    // turn increments
         whoWin();  // whoWin function call
       }
 
