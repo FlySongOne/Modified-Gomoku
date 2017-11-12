@@ -34,11 +34,11 @@ The challenges I encountered:
 - Go style white and black stones and a board 
 - Winner's name announcement
 - Reset button
+- score board
 
 
 ** future expansion: 
 - computer AI plays against a user. 
-- score board
 
 
 # Technologies 

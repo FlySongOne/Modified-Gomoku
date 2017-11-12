@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function(event){
 let player1Name = "";
 let player2Name = "";
-
+let ply1Win = false;
+let ply2Win = false;
+let ply1Score = 0;
+let ply2Score = 0;
 // object black that contains its value 'x' and image
 let black = {
    value: 'X',
@@ -222,18 +225,22 @@ function checkForWin(str){
               if(player2Name.length !== 0){
                 $('#screen').html(player2Name + " wins!");
                 keepPlaying = false;
+                ply2Win = true;
               }else{
                 $('#screen').html("White stones win!");
                 keepPlaying = false;
+                ply2Win = true;
               }
            }else if( str.substring(a,a+4) === charToCheck2){
            //    alert("Blak stones win!");
               if(player1Name.length !== 0){
                 $('#screen').html(player1Name + " wins!");
                 keepPlaying = false;
+                ply1Win = true;
               }else{
                 $('#screen').html("Black stones win!");
                 keepPlaying = false;
+                ply1Win = true;
               }
            }
        }
@@ -270,6 +277,8 @@ function reset(){
        }
 
     }
+    ply1Win = false; // set it to false, so game can be replayed
+    ply2Win = false; // when it is true, score will increase
     game();
 
 }
@@ -281,6 +290,28 @@ $( ".reset" ).click(function() {
   $('#screen').html("Connect 4 stones!");
 
 });
+
+// this function display score board
+// if player 1 wins the game, player 1 score increases
+// if player 2 wins the game, player 2 score increases and display
+function currentScore(){
+  if(ply1Win){
+     ply1Score++;
+  }else if(ply2Win){
+     ply2Score++;
+  }
+  let scoreWord ='';
+  // if there is name input, display name and scores
+  if(player1Name.length !== 0 && player2Name.length !== 0){
+     scoreWord = `${player1Name} ${ply1Score} : ${ply2Score} ${player2Name}`;
+  }else{
+     // if there is no name input, display black and white stones and scores
+     scoreWord = `Black Stones ${ply1Score} : ${ply2Score} White Stones `;
+  }
+  // change DOM Id score to show the scores
+  $('#score').html(scoreWord);
+}
+
 
 function game(){
 // starting of main codes
@@ -317,6 +348,7 @@ function game(){
         // once the cell is clicked, remove eventListener in that cell.
         $(cell[i]).off('click',play);
         whoWin();  // whoWin function call
+        currentScore(); // change score board and display
       }
 
     });
